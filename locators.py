@@ -1,47 +1,45 @@
 class Locators:
 
-    """ Поля Имя, Email, Пароль, Кнопка "Зарегистрироваться" на странице регистрации """
+    """  Urls  """
 
-    name_auth = './/fieldset[1]/div[1]/div[1]/input[1]'   #  *[@id="root"]/div[1]/main[1]/div[1]/form[1]/
-    email_auth = './/fieldset[2]/div[1]/div[1]/input[1]'   #  *[@id="root"]/div[1]/main[1]/div[1]/form[1]/
-    pass_auth = './/fieldset[3]/div[1]/div[1]/input[1]'   #  *[@id="root"]/div[1]/main[1]/div[1]/form[1]/
-    button_auth = './/button[text()="Зарегистрироваться"]'   #  *[@id="root"]/div[1]/main[1]/div[1]/form[1]/button[1]
-    incorrect_password_text = './/fieldset[3]/div[1]/p[1]'   #  '//*[@id="root"]/div[1]/main[1]/div[1]/form[1]/fieldset[3]/div[1]/p[1]'
-    text_user_is_exists = '//*[@id="root"]/div/main/div/p[1]'
+    main_page_url = 'https://stellarburgers.nomoreparties.site/'
     page_register_url = 'https://stellarburgers.nomoreparties.site/register'
-
-    #  main page:
-    page_main_url = 'https://stellarburgers.nomoreparties.site/'
-    button_login_to_account_main = '//*[@id="root"]/div[1]/main[1]/section[2]/div[1]/button[1]'  # Кнопка  «Войти в аккаунт» на главной странице
-    button_personal_account = '//*[@id="root"]/div[1]/header[1]/nav[1]/a[1]'  #  Кнопка Личный кабинет
-
-    # registration form
-    button_sign_in = '//*[@id="root"]/div[1]/main[1]/div[1]/div[1]/p[1]/a[1]'  #  Кнопка Зарегистрироваться
-    button_log_in_reg_form = '//*[@id="root"]/div[1]/main[1]/div[1]/div[1]/p[1]/a[1]'  #  Кнопка Войти в форме Регистрации
-    button_restore_password = '//*[@id="root"]/div[1]/main[1]/div[1]/div[1]/p[2]/a[1]'  #  Кнопка Восстановить пароль
-    button_log_in_restore_password = '//*[@id="root"]/div[1]/main[1]/div[1]/div[1]/p[1]/a[1]'  # Кнопка Войти в форме восстановления пароля
-
-    # personal account
-    button_exit_personal_account = '//*[@id="root"]/div[1]/main[1]/div[1]/nav[1]/ul[1]/li[3]/button[1]'  # кнопка "Выход" в личном кабинете
     page_login_url = 'https://stellarburgers.nomoreparties.site/login'
 
-    """ Поля Имя, Пароль, Кнопка "Войти" на странице входа """
 
-    name_lc = '//*[@id="root"]/div[1]/main[1]/div[1]/form[1]/fieldset[1]/div[1]/div[1]/input[1]'
-    pass_lc = '//*[@id="root"]/div[1]/main[1]/div[1]/form[1]/fieldset[2]/div[1]/div[1]/input[1]'
-    button_log_in = './/*[@id="root"]/div[1]/main[1]/div[1]/form[1]/button[1]'
+    """  User_credentials  """
 
-
-    button_lc = '//*[@id="root"]/div[1]/header[1]/nav[1]/a[1]/p[1]'  # кнопка «Личный кабинет»
+    user_name = 'Maria'
+    user_email = 'shcherbakova_sun999@yandex.ru'
+    user_password = '2421484'
 
 
-    #  section bellow with variables for login page:
-    field_email_xp = './/input[@class="text input__textfield text_type_main-default" and @type="text")]'
-    field_pass_xp = './/input[@class="text input__textfield text_type_main-default" and @type="password")]'
+    """  Поля на странице регистрации  """
+
+    name_auth = './/fieldset[1]/div/div/input'  # Поле "Имя"
+    email_auth = './/fieldset[2]/div/div/input'  # Поле "Email"
+    pass_auth = './/fieldset[3]/div/div/input'   # Поле " Пароль"
+    button_auth = './/button[text()="Зарегистрироваться"]'  # Кнопка "Зарегистрироваться"
+    incorrect_password_text = './/p[text()="Некорректный пароль"]'  # текст "Некорректный пароль"
+    text_user_is_exists = './/p[text()="Такой пользователь уже существует"]'  # текст "Такой пользователь уже существует"
+    button_log_in_reg_form = './/a[@class="Auth_link__1fOlj" and text()="Войти"]'  # Кнопка "Войти" в форме регистрации
 
 
+    """  Поля Имя, Пароль, Кнопка "Войти" на странице входа в Личном кабинете  """
+
+    field_email_xpath = ".//input[(@class='text input__textfield text_type_main-default' and @type='text')]"
+    field_password_xpath = ".//input[(@class='text input__textfield text_type_main-default' and @type='password')]"
+    page_login_button_xpath = ".//button[(@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa')]"
 
 
+    """  Main page """
+
+    button_login_to_account_main = './/button[text()="Войти в аккаунт"]'  # Кнопка  «Войти в аккаунт» на главной странице
+    button_personal_account = './/p[text()="Личный Кабинет"]'  # Кнопка "Личный Кабинет" на главной странице
 
 
-    #
+    """ Personal account  """
+
+    button_restore_password = './/a[text()="Восстановить пароль"]'  # Кнопка "Восстановить пароль"
+    button_log_in_restore_password = './/a[@class="Auth_link__1fOlj" and text()="Войти"]'  # Кнопка "Войти" в форме восстановления пароля
+    button_exit_personal_account = './/button[text()="Выход"]'  # Кнопка "Выход" в личном кабинете
