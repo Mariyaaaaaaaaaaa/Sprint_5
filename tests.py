@@ -38,7 +38,7 @@ def test_registration_success(driver):
     driver.find_element(By.XPATH, Locators.pass_auth).send_keys(f'{random.randint(100000, 9999999)}')
     driver.find_element(By.XPATH, Locators.button_auth).click()
     wait_for_load(driver, Locators.entrance_login_page)
-    assert driver.current_url == Locators.page_login_url
+    assert driver.current_url == Urls.page_login_url
 
 
 """ Регистрация - ошибка для некорректного пароля """
@@ -68,7 +68,7 @@ def test_registration_no_name(driver):
     driver.find_element(By.XPATH, Locators.pass_auth).send_keys(f'{random.randint(100000, 9999999)}')
     driver.find_element(By.XPATH, Locators.button_auth).click()
     WebDriverWait(driver, 50)
-    assert driver.current_url == Locators.page_register_url
+    assert driver.current_url == Urls.page_register_url
 
 
 """ Вход по кнопке «Войти в аккаунт» на главной странице """
@@ -78,7 +78,7 @@ def test_login_in_main_page(driver):
     wait_for_load(driver, Locators.entrance_login_page)
     set_log_in(driver)
     wait_for_load(driver, Locators.build_burger)
-    assert driver.current_url == Locators.main_page_url
+    assert driver.current_url == Urls.main_page_url
 
 
 """ Вход через кнопку "Личный кабинет"  """
@@ -88,7 +88,7 @@ def test_login_in_personal_account(driver):
     wait_for_load(driver, Locators.entrance_login_page)
     set_log_in(driver)
     wait_for_load(driver, Locators.build_burger)
-    assert driver.current_url == Locators.main_page_url
+    assert driver.current_url == Urls.main_page_url
 
 
 """ Вход через кнопку в форме регистрации  """
@@ -112,7 +112,7 @@ def test_login_in_restore_password(driver):
     wait_for_load(driver, Locators.entrance_login_page)
     set_log_in(driver)
     wait_for_load(driver, Locators.build_burger)
-    assert driver.current_url == Locators.main_page_url
+    assert driver.current_url == Urls.main_page_url
 
 
 """ Переход из личного кабинета в конструктор  """
@@ -124,7 +124,7 @@ def test_go_to_constructor_from_personal_account(driver):
     wait_for_load(driver, Locators.profile_title)
     driver.find_element(By.XPATH, Locators.constructor_title).click()
     wait_for_load(driver, Locators.build_burger)
-    assert driver.current_url == Locators.main_page_url
+    assert driver.current_url == Urls.main_page_url
 
 
 """ Переход из личного кабинета на логотип Stellar Burgers """
@@ -136,7 +136,7 @@ def test_go_to_logo_from_personal_account(driver):
     wait_for_load(driver, Locators.profile_title)
     driver.find_element(By.XPATH, Locators.logotype).click()
     wait_for_load(driver, Locators.build_burger)
-    assert driver.current_url == Locators.main_page_url
+    assert driver.current_url == Urls.main_page_url
 
 
 """ Выход из аккаунта по кнопке "Выйти" в личном кабинете  """
@@ -150,7 +150,7 @@ def test_exit_in_personal_account(driver):
     wait_for_load(driver, Locators.profile_title)
     driver.find_element(By.XPATH, Locators.button_exit_personal_account).click()
     wait_for_load(driver, Locators.entrance_login_page)
-    assert driver.current_url == Locators.page_login_url
+    assert driver.current_url == Urls.page_login_url
 
 
 """  Переход по разделам (Начинки) """

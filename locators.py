@@ -1,12 +1,5 @@
 class Locators:
 
-    """  Urls  """
-
-    main_page_url = 'https://stellarburgers.nomoreparties.site/'
-    page_register_url = 'https://stellarburgers.nomoreparties.site/register'
-    page_login_url = 'https://stellarburgers.nomoreparties.site/login'
-
-
     """  User_credentials  """
 
     user_name = 'Maria'
