@@ -27,15 +27,27 @@ class Locators:
 
     """  Поля Имя, Пароль, Кнопка "Войти" на странице входа в Личном кабинете  """
 
-    field_email_xpath = ".//input[(@class='text input__textfield text_type_main-default' and @type='text')]"
-    field_password_xpath = ".//input[(@class='text input__textfield text_type_main-default' and @type='password')]"
-    page_login_button_xpath = ".//button[(@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa')]"
+    field_email_xpath = './/input[@type="text" and @name="name"]'
+    field_password_xpath = './/input[@type="password" and @name="Пароль"]'
+    page_login_button_xpath = './/button[text()="Войти"]'
 
 
     """  Main page """
 
     button_login_to_account_main = './/button[text()="Войти в аккаунт"]'  # Кнопка  «Войти в аккаунт» на главной странице
     button_personal_account = './/p[text()="Личный Кабинет"]'  # Кнопка "Личный Кабинет" на главной странице
+    entrance_login_page = './/h2[text()="Вход"]'
+    build_burger = './/h1[text()="Соберите бургер"]'
+    constructor_title = './/p[text()="Конструктор"]'
+    logotype = './/div[@class="AppHeader_header__logo__2D0X2"]'
+    burger_ingredients = 'BurgerIngredients_ingredients__menuContainer__Xu3Mo'
+    fluorescent_bun = './/img[@alt="Флюоресцентная булка R2-D3"]'
+    fillings = './/span[text() = "Начинки"]'
+    fillings_active = './/span[text() = "Начинки"]/parent::div'
+    sauces = './/span[text() = "Соусы"]'
+    sauces_active = './/span[text() = "Соусы"]/parent::div'
+    buns = './/span[text() = "Булки"]'
+    buns_active = './/span[text() = "Булки"]/parent::div'
 
 
     """ Personal account  """
@@ -43,3 +55,9 @@ class Locators:
     button_restore_password = './/a[text()="Восстановить пароль"]'  # Кнопка "Восстановить пароль"
     button_log_in_restore_password = './/a[@class="Auth_link__1fOlj" and text()="Войти"]'  # Кнопка "Войти" в форме восстановления пароля
     button_exit_personal_account = './/button[text()="Выход"]'  # Кнопка "Выход" в личном кабинете
+    profile_title = './/a[text()="Профиль"]'
+
+
+    """ Восстановление пароля  """
+
+    restore_password = './/h2[text()="Восстановление пароля"]'
